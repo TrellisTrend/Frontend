@@ -17,7 +17,7 @@ import Footer from "./components/Footer";
 
 export default function App() {
   return (
-    <div className="px-4  md:px-[6vw] lg:px-[8vw]">
+    <div className="">
       <NavBar />
 
       <Routes>

@@ -76,7 +76,7 @@ const Collection = () => {
 
 
   return (
-    <div className="flex flex-col sm:flex-row justify-between gap-10 mt-10">
+    <div className="flex flex-col sm:flex-row justify-between gap-10 mt-10 px-4  md:px-[6vw] lg:px-[8vw]">
       {/* // Filter */}
 
       <div className="min-w-40">
