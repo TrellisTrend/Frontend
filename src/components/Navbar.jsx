@@ -10,7 +10,7 @@ const Navbar = () => {
   const [visible, setVisible] = useState(false);
   const {carts} = useSelector((state) => state.allCart);
   return (
-    <nav className="w-full bg-gray-100 h-[60px] flex justify-between items-center px-2">
+    <nav className="w-full bg-gray-100 h-[60px] flex justify-between items-center px-4 py-4 md:px-[6vw] lg:px-[8vw] border-b-2 border-gray-300">
       <NavLink
         className="flex flex-col items-center  w-24 sm:w-36 rounded-md"
         to="/"
@@ -46,11 +46,7 @@ const Navbar = () => {
       </div>
 
       <div className="flex items-center gap-6">
-        <img
-          src={assets.search_icon}
-          alt="search Icon"
-          className="w-6 cursor-pointer"
-        />
+        
 
         <div className="group relative">
           <img
