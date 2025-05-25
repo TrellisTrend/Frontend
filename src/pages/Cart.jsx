@@ -2,7 +2,7 @@
 
 const Cart = () => {
   return (
-    <div className="flex flex-col items-center justify-center h-screen">
+    <div className="flex flex-col items-center justify-center h-screen px-4  md:px-[6vw] lg:px-[8vw]">
       <h1 className="text-4xl font-bold mb-4">Cart Page</h1>
       
       
