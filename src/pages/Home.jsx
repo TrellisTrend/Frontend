@@ -8,7 +8,7 @@ import Policy from "../components/Policy"
 
 const Home = () => {
   return (
-    <div>
+    <div className="px-4  md:px-[6vw] lg:px-[8vw]">
       <Hero />
       <LatestCollection />
       <BestSeller />
