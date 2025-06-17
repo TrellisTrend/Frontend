@@ -18,7 +18,7 @@ export default class AboutUs extends Component {
                 <img
                   src={logo}
                   alt="logo"
-                  className="rounded-3xl hover:shadow-2xl "
+                  className="rounded-3xl"
                 />
               </div>
             </div>
@@ -82,7 +82,7 @@ export default class AboutUs extends Component {
                 <img
                   src={sustain}
                   alt="logo"
-                  className=""
+                  className="rounded-full"
                 />
               </div>
               <div className="text-center text-xl py-5">Sustainable Commitment</div>

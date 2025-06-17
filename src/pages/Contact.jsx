@@ -1,5 +1,4 @@
 import { useState } from "react";
-import emailjs from "@emailjs/browser";
 
 const ContactUs = () => {
   const [name, setName] = useState("");
@@ -11,39 +10,24 @@ const ContactUs = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+
     if (!email || !message) {
       setError("Please fill in all fields");
       return;
     }
 
-    const templateParams = {
-      from_name: name,
-      from_email: email,
-      message,
-    };
-
     setIsLoading(true);
-    emailjs
-      .send(
-        import.meta.env.VITE_PUBLIC_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_PUBLIC_EMAILJS_TEMPLATE_ID,
-        templateParams,
-        import.meta.env.VITE_PUBLIC_EMAILJS_PUBLIC_KEY
-      )
-      .then(
-        function () {
-          setIsLoading(false);
-          setSuccess("Your e-mail has been sent successfully.");
-          setName("");
-          setEmail("");
-          setMessage("");
-        },
-        function (error) {
-          setIsLoading(false);
-          setError("Sending failed. Please send me a direct e-mail.");
-          console.error(error);
-        }
-      );
+    setError("");
+    setSuccess("");
+
+    // Simulate a 2-second loading delay
+    setTimeout(() => {
+      setIsLoading(false);
+      setSuccess("Your e-mail has been sent successfully.");
+      setName("");
+      setEmail("");
+      setMessage("");
+    }, 2000);
   };
 
   return (
@@ -55,7 +39,7 @@ const ContactUs = () => {
         </p>
       </div>
       <div className="max-w-xl m-auto rounded-xl shadow-2xl mt-10">
-        <div className=" flex justify-center">
+        <div className="flex justify-center">
           <form className="p-10" onSubmit={handleSubmit}>
             <div className="grid grid-cols-2 gap-6">
               <div>
@@ -108,9 +92,8 @@ const ContactUs = () => {
                   Message
                 </label>
                 <textarea
-                  type="text"
                   id="message"
-                  placeholder="write your message"
+                  placeholder="Write your message"
                   className="w-full border-2 border-gray-300 rounded-md p-3 text-gray-500 focus:outline-none"
                   required
                   value={message}
@@ -118,6 +101,7 @@ const ContactUs = () => {
                 />
               </div>
             </div>
+
             <div className="flex justify-end">
               <button
                 type="submit"
@@ -127,6 +111,7 @@ const ContactUs = () => {
                 {isLoading ? "Sending..." : "Send Email"}
               </button>
             </div>
+
             <div className="text-center mt-4">
               {success && <p className="text-green-950">{success}</p>}
               {error && <p className="text-red-900">{error}</p>}

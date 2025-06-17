@@ -2,7 +2,6 @@ import { Component } from "react";
 import PropTypes from "prop-types";
 import { Link, Outlet, useLocation } from "react-router-dom";
 
-// Custom wrapper to use hooks inside a class component
 function DashboardWrapper() {
   const location = useLocation();
   return <Dashboard location={location} />;
