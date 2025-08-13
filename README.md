@@ -1,8 +1,16 @@
-# React + Vite
+# TrellisTrend - E-Commerce Demo Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A lightweight front-end mockup for a fashion store with filtering capabilities.
 
-Currently, two official plugins are available:
+## 🛠️ Tech Stack
+- **React** (Framework)
+- **Vite** (Builder)
+- **JavaScript** (Filter logic)
+- **Tailwind CSS** (Styling)
+- **Git** (Version control)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🧩 Features
+- **Category Filters**: Browse by Men/Women/Kids
+- **Seasonal Sorting**: Summer/Winter collections
+- **Price Ranges**: Under $20, $20-$50, $50+
+- **Responsive Design**: Works on mobile/desktop
